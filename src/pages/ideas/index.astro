@@ -1,0 +1,36 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import { IDEAS } from "@consts";
+
+const ideas = (await getCollection("ideas"))
+  .filter(idea => !idea.data.draft)
+  .sort((a, b) => a.data.rank - b.data.rank);
+  
+type Acc = {
+  [year: string]: CollectionEntry<"ideas">[];
+}
+
+---
+
+<PageLayout title={IDEAS.TITLE} description={IDEAS.DESCRIPTION}>
+  <Container>
+    <div class="space-y-10">
+      <div class="space-y-4">
+        {ideas.map(idea => (
+          <section class="animate space-y-4">
+            <div>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <ArrowCard entry={idea}/>
+                </li>
+              </ul>
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </Container>
+</PageLayout>

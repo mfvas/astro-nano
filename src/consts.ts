@@ -1,16 +1,17 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Astro Nano",
-  EMAIL: "markhorn.dev@gmail.com",
+  NAME: "youcanjust.build",
   NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_WORKS_ON_HOMEPAGE: 2,
+  NUM_WORKS_ON_HOMEPAGE: 3,
+  NUM_DID_ON_HOMEPAGE: 3,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NUM_IDEAS_ON_HOMEPAGE: 5,
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  TITLE: "youcanjust.build",
+  DESCRIPTION: "Just do it.",
 };
 
 export const BLOG: Metadata = {
@@ -25,20 +26,23 @@ export const WORK: Metadata = {
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
-  DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
+  DESCRIPTION:
+    "A collection of my projects, with links to repositories and demos.",
+};
+
+export const IDEAS: Metadata = {
+  TITLE: "Ideas",
+  DESCRIPTION: "Rules for life.",
 };
 
 export const SOCIALS: Socials = [
-  { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
+  {
+    NAME: "twitter/x",
+    HREF: "https://x.com/MattiSchroder",
   },
-  { 
-    NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
+
+  {
+    NAME: "linkedin (god forbid)",
+    HREF: "https://www.linkedin.com/in/mathiasschroder/",
   },
-  { 
-    NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/markhorn-dev",
-  }
 ];
